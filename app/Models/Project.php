@@ -18,4 +18,8 @@ class Project extends Model
         'githubURL',
         'finished'
     ];
+
+    public function type() {
+        return $this->belongsTo(Type::class);
+    }
 }
