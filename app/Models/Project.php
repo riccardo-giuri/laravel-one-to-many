@@ -16,7 +16,8 @@ class Project extends Model
         'description',
         'slug',
         'githubURL',
-        'finished'
+        'finished',
+        'type_id'
     ];
 
     public function type() {

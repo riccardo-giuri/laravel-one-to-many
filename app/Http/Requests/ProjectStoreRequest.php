@@ -26,7 +26,8 @@ class ProjectStoreRequest extends FormRequest
             'description' => "required",
             'imageURL' => "required|image|max:7000",
             'githubURL' => "required",
-            'finished' => "required"
+            'finished' => "required",
+            'type_id' => "nullable|exists:types,id"
         ];
     }
 

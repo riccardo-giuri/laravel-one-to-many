@@ -26,7 +26,8 @@ class ProjectUpdateRequest extends FormRequest
             'description' => "required",
             'imageURL' => "nullable|image|max:7000",
             'githubURL' => "required",
-            'finished' => "required"
+            'finished' => "required",
+            'type_id' => "nullable|exists:types,id"
         ];
     }
 

@@ -29,6 +29,16 @@
                 <input type="file" class="form-control" name="imageURL" value="{{ $project->imageURL }}">
             </div>
             <div class="mb-3">
+                <label for="form-label">Tipologia Progetto:</label>
+                <select class="form-select" name="type_id">
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" {{ $project->type_id === $type->id ? 'selected' : '' }}>
+                            {{ $type->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="form-label">GithubURL</label>
                 <input type="text" class="form-control" name="githubURL" value="{{ $project->githubURL }}">
             </div>

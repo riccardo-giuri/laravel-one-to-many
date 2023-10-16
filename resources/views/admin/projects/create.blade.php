@@ -27,6 +27,14 @@
                 <input type="file" accept="image/*" class="form-control" name="imageURL">
             </div>
             <div class="mb-3">
+                <label for="form-label">Tipologia Progetto:</label>
+                <select class="form-select" name="type_id">
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="form-label">GithubURL</label>
                 <input type="text" class="form-control" name="githubURL">
             </div>
@@ -36,7 +44,7 @@
             </div>
             <div class="mb-3">
                 <label for="form-label">Progetto terminato:</label>
-                <select type="text" class="form-control" name="finished">
+                <select class="form-select" name="finished">
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select>
